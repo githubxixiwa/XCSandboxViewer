@@ -31,8 +31,9 @@
     NSLog(@"\n 🐳 Visit %@ in your WebDAV client 🐳 \n", _davServer.serverURL);
 }
 -(void)stop{
-    if (self.davServer) {
+    if (_davServer) {
         [self.davServer stop];
+        _davServer = nil;
     }
 }
 
